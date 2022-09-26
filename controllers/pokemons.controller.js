@@ -7,4 +7,15 @@ const getAllPokemons = (req, res) => {
     res.send(data);
 };
 
-export { getAllPokemons };
+const getPokemon = name => {
+    const pokemon = data.results.find(pokemon => pokemon.name === name);
+    return pokemon;
+};
+
+const getPokemonByName = (req, res) => {
+    console.log(req);
+    const pokemon = getPokemon(req.params.name);
+    res.send(pokemon);
+};
+
+export { getAllPokemons, getPokemonByName };

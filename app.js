@@ -8,7 +8,7 @@ import { pokemonsRouter } from './routes/pokemons.routes.js';
 app.use(express.json());
 
 //Define endpoints
-app.use('/api/SPS/Pokemons', pokemonsRouter);
+app.use('/api/SPS/pokemons', pokemonsRouter);
 
 app.listen(port, () => {
     console.log(`App running on port ${port}`);
